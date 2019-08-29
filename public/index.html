@@ -1,13 +1,16 @@
 <html>
-
 <head>
-  <title>Express</title>
+  <title>nr impress api</title>
   <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
-
 <body>
-  <h1>Express</h1>
-  <p>Welcome to Express</p>
+  <h1>曝光量计算工具后端接口</h1>
+  <h2>/domain</h2>
+  <ul>
+    <li><strong>GET</strong>&nbsp;/example.com</li>
+    <p>获取某个主域名的数据。</p>
+    <li><strong>POST</strong>&nbsp;/</li>
+    <p>往数据库添加一个主域名，数据格式为<code> {domain: 'example.com', subs: ['a.example.com#10.24', ...]}</code>，10.24 表示该子域名的 pv 占比。</p>
+  </ul>
 </body>
-
 </html>
