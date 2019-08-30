@@ -40,7 +40,7 @@ const MONGODB_DB = process.env.MONGODB_DB;
           data: data[0]
         }));
       } else {
-        res.status(404).send(JSON.stringify({
+        res.send(JSON.stringify({
           msg: '不存在主域名'
         }));
       }
@@ -56,7 +56,7 @@ const MONGODB_DB = process.env.MONGODB_DB;
 
     if (data.subs.length > 0) {
       try {
-        const r = await col.replaceOne({
+        await col.replaceOne({
           domain: data.domain
         }, data, {
           upsert: true
